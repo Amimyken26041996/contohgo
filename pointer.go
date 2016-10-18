@@ -1,24 +1,21 @@
 package main
 import "fmt"
-func zeroval(ival int){
-   ival = 0
+
+func zeroval(ival int) {
+    ival = 0
 }
 
-func Zeroval (iptr * int) {
-     * iptr = 0
+func zeroptr(iptr *int) {
+    *iptr = 0
 }
+func main() {
+    i := 1
+    fmt.Println("initial:", i)
+    zeroval(i)
+    fmt.Println("zeroval:", i)
 
-func main () {
-    i : 1 
-     fmt.println("initial :",i)
+    zeroptr(&i)
+    fmt.Println("zeroptr:", i)
 
-Zeroptr (i)
-fmt.println("zeroval :",i)
-
-Zeroptr (&i)
-fmt.println("zeroptr:",i)
-
-fmt.prntl(" pointer :",&i)
-
-
+    fmt.Println("pointer:", &i)
 }
